@@ -18,10 +18,13 @@ jobs:
           java-version: '8'
           distribution: 'adopt'
 
-      - name: Build
-        run: mvn --batch-mode -DskipTests package
-
       - name: Test
         run: mvn --batch-mode -Dmaven.test.failure.ignore=true test
+        
+      - name: Build
+        run: mvn --batch-mode -DskipTests package
+        
+      - name: Build docker image
+        run: docker build -t git_workflow
 
       
