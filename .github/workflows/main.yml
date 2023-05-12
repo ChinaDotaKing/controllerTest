@@ -25,6 +25,8 @@ jobs:
         run: mvn --batch-mode -DskipTests package
         
       - name: Build docker image
-        run: docker build git_workflow
+        run: docker build .
+        
+       
 
       
