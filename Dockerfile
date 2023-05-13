@@ -1,4 +1,4 @@
-FROM ubuntu:18.06
+FROM ubuntu
 
 COPY . .
 RUN mvn install
