@@ -24,7 +24,7 @@ jobs:
       - name: Build
         run: mvn --batch-mode -DskipTests package
         
-      - name: Build docker image
+      - name: Build docker image 
         run: docker build .
         
        
